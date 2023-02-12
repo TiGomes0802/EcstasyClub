@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pulseira"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_naousado"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:onClick="onClickNaoUsados"
+                android:text="@string/nao_usada"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:background="@drawable/ativo_naousada"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_usado"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:onClick="onClickUsados"
+                android:text="@string/usado"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:background="@drawable/desativo_usado"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp">
+
+            <FrameLayout
+                android:id="@+id/fragment_pulseira"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
